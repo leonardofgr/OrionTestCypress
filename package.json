@@ -1,0 +1,16 @@
+{
+  "name": "cypress_curso_udemy",
+  "version": "1.0.0",
+  "description": "curso_udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "author": "leofgr",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.4.0",
+    "cypress-xpath": "^1.6.2"
+  }
+}
