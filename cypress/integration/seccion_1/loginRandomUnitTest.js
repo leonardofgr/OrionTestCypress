@@ -1,16 +1,18 @@
-const faker = require('faker')
+const datos = require('/Users/leonardo/Proyectos VS Code/Cypres/CypressUdemyCurso/arrayJasonRandomDataForLogin.json')
 
-let userData = {
-   
-    randomEmail: faker.internet.email(),
-    randomPassword: faker.random.number()
-}
-
-
-describe('Login Tests', function () {
-    it('Successfull login', function () {
+describe('Login Tests with random data', () => {
+    
+    beforeEach(()=>{
         cy.visit('http://oriontest.mitrebol.cl/login')
-        cy.get('#email').type(randomEmail)
-        cy.get('#password').type(randomPassword)
+
+    })
+    datos.forEach(test => {
+        
+        it('Se espera no ingresar a Orion por credenciales incorrectas',()=>{
+            cy.get('#email').type(test.email)
+            cy.get('#password').type(test.passwoord)
+            cy.xpath("//body[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[4]/div[1]/button[1]").click()
+            cy.wait(3000)
+        })
     })
 })

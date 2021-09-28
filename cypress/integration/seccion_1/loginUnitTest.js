@@ -10,5 +10,6 @@ describe("Informe QA en Orion Web", ()=>{
         cy.wait(3000)
        
     })
+    
   
 })
