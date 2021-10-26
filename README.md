@@ -18,7 +18,7 @@ ejecutar la interfaz de cypress con el siguiente comando
 npm run cypress:open
 
 para grabar y subir los resultados al dash de cypress
-npx cypress run --record --key 8b3b6d82-ba34-44da-9044-90f746fb0573
+npx cypress run --record --key 828ac4dd-7356-44e9-8766-d1a46b9ce526
 
 
 PAra configurar una nuevo dasboard es necesario configurar el id de proyecto en el archivo cypress.json   "projectId": "qv31aa" y cambiar la key record con el comando: npx cypress run --record --key "xxxxx"
