@@ -23,3 +23,34 @@ npx cypress run --record --key 8b3b6d82-ba34-44da-9044-90f746fb0573
 
 
 Para configurar una nuevo dasboard es necesario configurar el id de proyecto en el archivo cypress.json   "projectId": "qv31aa" y cambiar la key record con el comando: npx cypress run --record --key "xxxxx"
+
+__________________Instalacion de lambda test______________
+
+1. npm install -g lambdatest-cypress-cli
+
+2. lambdatest-cypress init
+
+3. Modificar los datos de conexion con el dasboard
+   
+   "auth": {
+    "username": "LT_USERNAME",
+    "access_key": "LT_ACCESS_KEY"
+    },
+
+ 4.Verificar y confirmar el entorno de las pruebas en el archivo lambdatest-config.json
+
+   "run_settings": {
+  "cypress_config_file": "cypress.json",
+  "build_name": "build-name",
+  "parallels": 1,
+  "specs": "./*.spec.js", --->> Modificar esta linea segun corresponda a la ruta en donde se encuentre el o los test que queremos ejecutar
+  "ignore_files": "",
+  "npm_dependencies": {
+     "cypress": "6.1.0"
+  },
+  "feature_file_suppport": false
+},
+
+5. ejecutar el siguiente comando
+    
+    lambdatest-cypress run
