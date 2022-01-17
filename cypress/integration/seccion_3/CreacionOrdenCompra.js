@@ -14,11 +14,11 @@ describe("Informe QA en Orion Web", ()=>{
         //?click en gestion compras
         cy.get(':nth-child(1) > .text-success > img').click({force:true})
         //?tiempo de espera pantalla de carga
-        cy.wait(15000)
+        cy.wait(5000)
         //?click en logo azul(orden de compra)
         cy.xpath("/html[1]/body[1]/div[4]/div[2]/div[1]/nav[1]/form[1]/a[1]/button[1]").click({force:true})
-        //?tiempo de espera para carga de pantalla ordenes de compra existentes
-        cy.wait(290000)
+        //?tiempo de espera para carga de pantalla ordenes de compra existentes tiempo largo XD
+        cy.wait(350000)
         //?click en boton nueva orden de compra
         cy.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/a[1]").click({force:true})
         cy.wait(5000)
@@ -31,24 +31,25 @@ describe("Informe QA en Orion Web", ()=>{
         //?Seleccionar sucursal proveedor
         cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[5]/div[1]/select[1]").select('CASA MASA MATRIZ')
         //?Seleccionar division
-        cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[6]/div[1]/select[1]").contains('CASA MASA')
+        cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[6]/div[1]/select[1]").select('CASA MASA')
         //?Seleccionar sucural empresa emisor
         cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[2]/input[1]").click()
         cy.xpath("/html[1]/body[1]/div[6]/div[1]/div[1]/ul[1]/li[2]").contains('BARROS ARANA').click()
+        cy.wait(3000)
         //cy.xpath("/html[1]/body[1]/div[7]/div[1]/div[1]/ul[1]/li[3]").contains('CAJON').click()
         //?click en lugar vacio para saltar focus 
         cy.xpath("/html[1]/body[1]/nav[1]/div[1]").click()
         cy.wait(5000)
         //? Seleccionar bodega emisor
-        cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]/select[1]").select('BODEGA RETAIL')
+        cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]/select[1]").select('BODEGA RETAIL',{force:true})
 
         //?seccion de condiciones globales
         //?seleccione solicitud de ...
-        cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/select[1]").select('OC de mercadería')
+        cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/select[1]").select('OC de mercadería',{force:true})
         //?Seleccione lista de costo
-        cy.xpath("//html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/div[1]/select[1]").select('2021-03-30 2021-03-30 lista costo casa masa 26-11 P3')
+        cy.xpath("//html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/div[1]/select[1]").select('2021-03-30 2021-03-30 lista costo casa masa 26-11 P3',{force:true})
         //?Ingresar una observacion de orden compra , evaluar 500 caracteres , se pruebas con 600
-        cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[7]/div[1]/textarea[1]").type('Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo, eum ne eruditi blandit suscipiantur. Mazim sapientem sed id, sea debet commune iracundia in. Eius falli propriae te usu. In usu nonummy volumus expetenda, sint quando facilisis ei per, delectus constituto sea teDicunt percipit deserunt ut usu. Aliquip delenit an eam, vocent vituperata vim ea. Ei mollis audire interpretaris cum, ei impedit fierent sea. Ius at homero noster prompta, ea sit dignissim vituperata efficiendi. Natum placerat ad mei.No his munere interesset. At soluta accusam gloriatur eos, ferri commodo sed id, e')
+        cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[7]/div[1]/textarea[1]").type('Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo, eum ne eruditi blandit suscipiantur. Mazim sapientem sed id, sea debet commune iracundia in. Eius falli propriae te usu. In usu nonummy volumus expetenda, sint quando facilisis ei per, delectus constituto sea teDicunt percipit deserunt ut usu. Aliquip delenit an eam, vocent vituperata vim ea. Ei mollis audire interpretaris cum, ei impedit fierent sea. Ius at homero noster prompta, ea sit dignissim vituperata efficiendi. Natum placerat ad mei.No his munere interesset. At soluta accusam gloriatur eos, ferri commodo sed id, e',{force:true})
         
         //*TODO: adelantar trabajo y crear los xpath para los botones existentes en el resto del formulario , (a la espera de los CU)
        
@@ -79,16 +80,21 @@ describe("Informe QA en Orion Web", ()=>{
         //?seccion detalle orden de compra
         //?boton +
         cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/div[3]/button[1]/i[1]").click({force:true})
+       
+       
         //? dropdown de paginado , cantidad de elementos por pagina 10, 50 o 100
+        cy.wait(3000)
+         //cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/select[1]").select('Ver 50 por pagina',{force:true})
+        cy.get('.form-inline > .form-control').select('Ver 50 por pagina',{force:true})
+        cy.wait(10000)
+        
+        cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/select[1]").select('Ver 100 por pagina',{force:true})
+        cy.wait(5000)
         cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/select[1]").select('Ver 50 por pagina',{force:true})
         cy.wait(5000)
-        /*cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/select[1]").select('Ver 100 por pagina',{force:true})
-        cy.wait(5000)
-        cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/select[1]").select('Ver 10 por pagina',{force:true})
-        cy.wait(5000)*/
 
         //? checkbox primer elemento de la lista
-        cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/input[1]").check({force:true})
+        cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/input[1]").check()
         cy.wait(2000)
         //? Agregar seleccionado
         cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/button[1]").click({force:true})
@@ -103,6 +109,17 @@ describe("Informe QA en Orion Web", ()=>{
         //? se elimina un producto de la lista
         cy.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/div[1]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[17]/div[1]/button[2]/i[1]").click({force:true})
         cy.wait(5000)
+
+        /*
+        //! opcion 2: traer mix completo proveedor
+        cy.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/label[2]/input[1]").click({force:true})
+        cy.wait(3000)*/
+        //? cerrar ventana OC por sucursal
+        cy.get(':nth-child(3) > .vs-popup > .vs-popup--header > .vs-icon').click({force:true})
+        cy.wait(3000)
+
+
+        
 
 
 

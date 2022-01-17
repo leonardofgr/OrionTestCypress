@@ -54,3 +54,10 @@ __________________Instalacion de lambda test______________
 5. ejecutar el siguiente comando
     
     lambdatest-cypress run
+
+
+6. lanzar server de json local
+json-server --watch db.json
+
+7. Mega comando para grabar y ejecutar un solo test
+npx cypress run --spec cypress/integration/seccion_3/CreacionOrdenCompra.js --record --key 828ac4dd-7356-44e9-8766-d1a46b9ce526

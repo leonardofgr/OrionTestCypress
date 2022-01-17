@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 4,
+      "title": "Javascript",
+      "author": "Armando Casas"
+    },
+    {
+      "id": 17,
+      "title": "0.9568970024482342",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 18,
+      "title": "0.010689713377509902",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 19,
+      "title": "0.6780035923482295",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 20,
+      "title": "0.5949719210573843",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 21,
+      "title": "0.18627764025278393",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 22,
+      "title": "0.5937477499254691",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 23,
+      "title": "0.8756442482014875",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 24,
+      "title": "0.73593125291544",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 25,
+      "title": "0.7648525980813052",
+      "author": "Sacarias flores del campo"
+    },
+    {
+      "id": 26,
+      "title": "0.0011131166835531836",
+      "author": "Sacarias flores del campo"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

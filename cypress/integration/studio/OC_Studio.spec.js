@@ -44,6 +44,8 @@ it('OC_Studio', function() {
   cy.get(':nth-child(3) > :nth-child(1) > .check').check({force:true});
   cy.get(':nth-child(4) > :nth-child(1) > .check').check({force:true});
   cy.get(':nth-child(5) > :nth-child(1) > .check').check({force:true});
+  cy.get(':nth-child(6) > :nth-child(1) > .check').check({force:true});
+  cy.get(':nth-child(7) > :nth-child(1) > .check').check({force:true});
   cy.get('.col-md-2 > .btn').click({force:true});
   cy.get(':nth-child(1) > [aria-colindex="12"] > .form-control').click({force:true});
   cy.get(':nth-child(1) > [aria-colindex="12"] > .form-control').type('1',{force:true});
@@ -60,7 +62,10 @@ it('OC_Studio', function() {
   cy.get(':nth-child(2) > .vs-popup > .vs-popup--header > .vs-icon').click({force:true});
   cy.get('.col-md-5 > .btn-toolbar > :nth-child(1) > .btn').click({force:true});
 
-  cy.get('#form7').type('Orden de compra creada desde cypress');
- 
+  cy.get('#form7').type('Orden de compra creada desde cypress',{force:true});
 
+
+
+  //boton guardar OC
+  cy.get('.card-body > .btn-toolbar > :nth-child(1) > .btn').click({force:true});
 });

@@ -9,7 +9,7 @@ describe("Informe QA en Orion Web", ()=>{
         cy.xpath("//body[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[4]/div[1]/button[1]").click()
         cy.wait(3000)
         //click en gestion comercial 
-        cy.get('#sidebar-wrapper > ul > li:nth-child(3) > a').click()
+        cy.get(':nth-child(4) > .text-center > p').click({force:true})
         cy.wait(2000)
         //click en Gestion compras
         cy.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/a[1]/h3[1]").click({force:true})
