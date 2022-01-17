@@ -11,14 +11,11 @@ it('OC con proveedor externo', function() {
   cy.get(':nth-child(4) > .text-center > .menu-imagen-visible').click({force:true});
   cy.wait(3000)
   cy.get(':nth-child(1) > .text-success > img').click({force:true})
-
   cy.wait(3000)
   //boton orden de compra
   cy.xpath("/html[1]/body[1]/div[4]/div[2]/div[1]/nav[1]/form[1]/a[1]/button[1]").click({force:true})
   cy.get('.btn-toolbar > :nth-child(4) > .btn').click({force:true});
   cy.wait(5000)//!tiempo de espera variable y/o extenso
-
-  /* ==== Generated with Cypress Studio ==== */
   cy.get('[style="margin-top: 40px;"] > .col-10 > .form-control').select('1');
   cy.get(':nth-child(1) > :nth-child(2) > .card > .card-body > .form-group > .col-10 > .form-control').select('1');
   cy.get(':nth-child(2) > .card > .card-body > :nth-child(2) > .col-10 > .form-control').select('16');
@@ -78,8 +75,6 @@ it('OC con proveedor externo', function() {
   cy.get('.col-md-2 > .btn').click({force:true});
   cy.wait(3000)
 
-
-
   cy.get('#table-transition-example > tbody > :nth-child(1)').click({force:true});
   cy.get(':nth-child(1) > [aria-colindex="12"] > .form-control').clear({force:true});
   cy.get(':nth-child(1) > [aria-colindex="12"] > .form-control').type('2');
@@ -93,7 +88,6 @@ it('OC con proveedor externo', function() {
 
   cy.get('#form7').click({force:true});
   
-
   cy.get(':nth-child(4) > [aria-colindex="12"] > .form-control').clear({force:true});
   cy.get(':nth-child(4) > [aria-colindex="12"] > .form-control').type('2',{force:true});
   cy.get(':nth-child(5) > [aria-colindex="12"] > .form-control').clear({force:true});
