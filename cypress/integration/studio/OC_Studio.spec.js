@@ -1,12 +1,5 @@
-// OC_Studio.spec.js created with Cypress
-//
-// Start writing your Cypress tests below!
-// If you're unfamiliar with how Cypress works,
-// check out the link below and learn how to write your first test:
-// https://on.cypress.io/writing-first-test
-/* ==== Test Created with Cypress Studio ==== */
+
 it('OC_Studio', function() {
-  /* ==== Generated with Cypress Studio ==== */
   cy.visit('http://oriontest.mitrebol.cl/login');
   cy.get('#email').clear();
   cy.get('#email').type('vortiz@helpcom.cl');

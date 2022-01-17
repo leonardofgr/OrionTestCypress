@@ -1,7 +1,7 @@
 /// <reference types='cypress-xpath' />
 
 describe("Informe QA en Orion Web", ()=>{
-    it ("El usuario crea un nuevo mix",()=>{
+    it ("El usuario gestiona la ventana centralizacion",()=>{
         cy.visit('http://oriontest.mitrebol.cl/login')
         cy.get('#email').type('vortiz@helpcom.cl')
         cy.get('#password').type('123456')
